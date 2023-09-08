@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+
+    @apply py-1 dark:text-slate-100 dark:bg-slate-800;
+}
+
+button {
+    @apply p-0.5 border-2 border-slate-800 dark:border-slate-300 bg-slate-300 dark:bg-slate-700 rounded-sm;
+}
+
+button:hover:not(:disabled) {
+    @apply bg-slate-400 dark:bg-slate-500;
+}
+
+button:disabled {
+    @apply opacity-60;
+}
+
+input[type="checkbox"] {
+    @apply accent-teal-300;
+}
+
+input[type="text"] {
+    @apply p-0.5 border-2 border-slate-800 dark:border-slate-300 dark:bg-slate-800 rounded-sm;
+}
+
+/* Mobile */
+main {
+    padding: 0 1% 0 1%;
+}
+
+/* Desktop */
+@media screen and (min-width: 576px) {
+    main {
+        padding: 0 20% 0 20%;
+    }
+}
